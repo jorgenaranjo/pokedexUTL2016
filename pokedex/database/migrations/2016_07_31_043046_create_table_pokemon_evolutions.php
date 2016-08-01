@@ -16,6 +16,7 @@ class CreateTablePokemonEvolutions extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('pokemon_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
