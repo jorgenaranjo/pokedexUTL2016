@@ -62,4 +62,13 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+    /**
+     * Get the path to the login route.
+     *
+     * @return string
+     */
+    public function loginPath()
+    {
+        return property_exists($this, 'loginPath') ? $this->loginPath : route('login');
+    }
 }
