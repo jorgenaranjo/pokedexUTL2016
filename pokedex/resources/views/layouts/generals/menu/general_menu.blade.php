@@ -7,7 +7,7 @@
         @if(Auth::user()->type == 'admin')
             @include('layouts.generals.menu.partials.admin')
         @endif
-        @if(Auth::user()->type == 'customer')
+        @if(Auth::user()->type == 'teacher')
             @include('layouts.generals.menu.partials.customer')
         @endif
     </div>
