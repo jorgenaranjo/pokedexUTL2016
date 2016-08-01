@@ -17,9 +17,19 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password', 60);
+            $table->enum('type', ['admin', 'teacher']);
             $table->rememberToken();
             $table->timestamps();
         });
+
+        $now = date('Y-m-d H:i:s');
+        \DB::table('users')->insert([
+            'name' => 'Administrador Pokedex',
+            'email' => 'admin@pokemon.com',
+            'password' => bcrypt('admin.1234'),
+            'type' => 'admin',
+            'created_at' => $now
+        ]);
     }
 
     /**
