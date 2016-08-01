@@ -19,6 +19,6 @@ class PokemonStats extends Model
 
     public function pokemon()
     {
-        return $this->belongsTo('App\Pokemon');
+        return $this->belongsTo('App\Pokemon', 'id');
     }
 }

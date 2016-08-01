@@ -28,7 +28,7 @@ class Pokemon extends Model
 
     public function stats()
     {
-        return $this->hasMany('App\PokemonStats');
+        return $this->hasMany('App\PokemonStats', 'pokemon_id');
     }
 
     public function types()

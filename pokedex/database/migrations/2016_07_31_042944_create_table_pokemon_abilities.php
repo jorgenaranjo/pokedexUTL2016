@@ -16,6 +16,7 @@ class CreateTablePokemonAbilities extends Migration
             $table->increments('id');
             $table->string('ability');
             $table->integer('pokemon_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

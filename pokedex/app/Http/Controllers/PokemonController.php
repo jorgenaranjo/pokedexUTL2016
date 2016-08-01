@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pokemon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -17,6 +18,10 @@ class PokemonController extends Controller
     public function index()
     {
         //
+    }
+
+    public function getAllPokemons(){
+        return Pokemon::with('types')->with('abilities')->with('evolutions')->with('stats')->limit(1)->get();
     }
 
     /**
