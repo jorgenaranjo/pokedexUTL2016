@@ -3,9 +3,7 @@
         <li><a href="{{ route('login')  }}">Login</a></li>
         <li><a href="{{ route('register')  }}">Register</a></li>
     @else
-{{--
-        <li><a href="#!"><i class="material-icons left">record_voice_over</i>Pokemones</a></li>
---}}
+        <li><a href="{{ route('pokemons.index') }}"><i class="material-icons left">record_voice_over</i>Pokemones</a></li>
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">
                 {{ Auth::user()->name }}  <i class="material-icons right">arrow_drop_down</i></a></li>
     @endif
@@ -17,9 +15,7 @@
         <li><a href="{{ route('login')  }}">Login</a></li>
         <li><a href="{{ route('register')  }}">Register</a></li>
     @else
-        {{--
-                <li><a href="#!"><i class="material-icons left">record_voice_over</i> Pokemones</a></li>
-        --}}
+        <li><a href="{{ route('pokemons.index') }}"><i class="material-icons left">record_voice_over</i> Pokemones</a></li>
         <li><a href="#!"><i class="material-icons left">person</i>Perfil</a></li>
         <li><a href="{{ route('logout') }}"><i class="fa fa-btn fa-sign-out"></i>{{ trans('menus.logout') }}</a></li>
     @endif

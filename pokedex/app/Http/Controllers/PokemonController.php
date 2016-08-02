@@ -17,11 +17,11 @@ class PokemonController extends Controller
      */
     public function index()
     {
-        //
+        return view('templates.pokemon.index');
     }
 
     public function getAllPokemons(){
-        return Pokemon::with('types')->with('abilities')->with('evolutions')->with('stats')->limit(1)->get();
+        return Pokemon::with('types')->with('abilities')->with('evolutions')->with('stats')->get();
     }
 
     /**

@@ -32,10 +32,11 @@
 
 <!-- If is Customer -->
 @if(Auth::user()->type == 'teacher')
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
     <!-- Factories -->
+    <script src="{{ asset('js/scripts/services/pokemon/PokemonServices.js') }}"></script>
     <!-- Controllers -->
+    <script src="{{ asset('js/scripts/controllers/pokemon/PokemonController.js') }}"></script>
     <!-- EXtras -->
 
 
