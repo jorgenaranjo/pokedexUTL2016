@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12 m6 l4" ng-repeat="pokemon in pokemons">
-        <div class="card medium">
+        <div class="card">
             <div class="row red darken-3 white-text">
                 <div class="col s12 m12 l5">
                     <h5>@{{ pokemon.name }}</h5>
@@ -14,12 +14,17 @@
 
             </div>
             <div class="card-image center">
-                <center><img ng-src="@{{ 'img/pokemons/' + pokemon.name + '.jpg' | lowercase}}"
-                     style="width: 200px;height: 200px"></center>
-                <a class="waves-effect waves-light btn" ng-repeat="pokemonType in pokemon.types">@{{ pokemonType.type }}</a>
+                <center><img ng-src="@{{ pokemon.name | imageify}}"
+                     style="width: 200px;height: 200px" class="materialboxed"></center>
+
+                <a href="#" ng-repeat="pokemonType in pokemon.types">
+                  <span class="waves-effect waves-light btn type type-@{{pokemonType.type | lowercase}}">
+                    @{{pokemonType.type}}
+                  </span>
+                </a>
             </div>
             <div class="card-action center">
-                <a class="waves-effect waves-light btn">Mas informaci&oacute;n</a>
+                <a class="waves-effect waves-light btn" ng-click="showPokemon(pokemon)">Mas informaci&oacute;n</a>
             </div>
         </div>
     </div>

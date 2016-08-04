@@ -36,4 +36,5 @@
             </dir-pagination-controls>
         </div>
     </div>
+    @include('templates.pokemon.partials.modal')
 @endsection

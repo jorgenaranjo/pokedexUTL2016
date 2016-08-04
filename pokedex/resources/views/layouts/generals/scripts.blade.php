@@ -21,6 +21,9 @@
 <script src="{{ asset('js/scripts/filters/filters.js') }}"></script>
 <script src="{{ asset('js/scripts/directives/directives.js') }}"></script>
 
+<script src="{{ asset('js/semantic.js') }}"></script>
+<script src="{{ asset('js/modal.min.js') }}"></script>
+
 
 <!-- If is Admin -->
 @if(Auth::user()->type == 'admin')
@@ -48,6 +51,7 @@
         $('select').material_select();
         $(".button-collapse").sideNav();
         $('.slider').slider({height: 700});
+        $('.materialboxed').materialbox();
     });
 </script>
 

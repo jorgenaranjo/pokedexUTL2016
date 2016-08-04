@@ -21,6 +21,10 @@ angular.module('Pokedex')
                 );
         });
 
+        $scope.showPokemon = function(pokemon){
+            $scope.pokemon = pokemon;
+            $('.ui.modal').modal('show');
+        }
 
         /*$scope.editUserModal = function(user){
             $scope.user = user;
